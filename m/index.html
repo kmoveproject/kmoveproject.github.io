@@ -1,39 +1,12 @@
-<?
-if(!function_exists("is_moblile"))
-{
-  function is_moblile()
-  {
-    $connet_m = $_SERVER['HTTP_USER_AGENT'];
-    if(strpos( $connet_m,  "iPhone", 0) > -1)
-    {
-      return "아이폰";
-    }
-
-    if(strpos( $connet_m,  "Android", 0) > -1)
-    {
-      return "안드로이드";
-    }
-    return 0;
-  }
-}
-
-if($PC_MODE == 'true') $_SESSION['PC_MODE'] = "true";
-
-if(is_moblile() && $_SESSION['PC_MODE'] != "true")
-{
-  header("location:https://kmoveproject.github.io/m/index.htmll");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>반응형모바일웹P418</title>
+    <title>반응형모바일웹</title>
 </head>
 <body>  <!-- 반드시 index.html -->
-    <h1>PC메인</h1>
+    <h1>모바일 메인</h1>
     <h2>도메인 최초 접속시 페이지 입니다</h2>
-
 </body>
 </html>
